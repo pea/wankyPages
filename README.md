@@ -116,4 +116,7 @@ Supported Animations
 - foldLeftRight
 - pushLeftRight
 - foldTopBottom
-- moveToLeftRightFade
+- moveToLeftRightEasing
+- scaleDown
+- glueLeftRight
+- cubeLeftRight

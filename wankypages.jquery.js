@@ -134,11 +134,39 @@
                         rightOutAnimation = 'pt-page-rotateFoldTop';
                     break;
                     
-                    case 'moveToLeftRightFade':
-                        leftInAnimation   = 'pt-page-rotateUnfoldBottom ';
-                        leftOutAnimation  = 'pt-page-rotateUnfoldLeft';
-                        rightInAnimation  = 'pt-page-rotateUnfoldBottom ';
-                        rightOutAnimation = 'pt-page-rotateUnfoldRight';
+                    case 'moveToLeftRightEasing':
+                        leftInAnimation   = 'pt-page-moveFromRight';
+                        leftOutAnimation  = 'pt-page-moveToLeftEasing pt-page-ontop';
+                        rightInAnimation  = 'pt-page-moveFromLeft';
+                        rightOutAnimation = 'pt-page-moveToRightEasing pt-page-ontop';
+                    break;
+                    
+                    case 'scaleDown':
+                        leftInAnimation   = 'pt-page-moveFromRight pt-page-ontop';
+                        leftOutAnimation  = 'pt-page-scaleDown';
+                        rightInAnimation  = 'pt-page-moveFromLeft pt-page-ontop';
+                        rightOutAnimation = 'pt-page-scaleDown';
+                    break;
+                    
+                    case 'glueLeftRight':
+                        leftInAnimation   = 'pt-page-moveFromRight pt-page-delay200 pt-page-ontop';
+                        leftOutAnimation  = 'pt-page-rotateRightSideFirst';
+                        rightInAnimation  = 'pt-page-moveFromLeft pt-page-delay200 pt-page-ontop';
+                        rightOutAnimation = 'pt-page-rotateLeftSideFirst';
+                    break;
+                    
+                    case 'cubeLeftRight':
+                        leftInAnimation   = 'pt-page-rotateCubeLeftIn';
+                        leftOutAnimation  = 'pt-page-rotateCubeLeftOut pt-page-ontop';
+                        rightInAnimation  = 'pt-page-rotateCubeRightIn';
+                        rightOutAnimation = 'pt-page-rotateCubeRightOut pt-page-ontop';
+                    break;
+                    
+                    case 'slide':
+                        leftInAnimation   = 'pt-page-rotateSlideIn';
+                        leftOutAnimation  = 'pt-page-rotateSlideOut';
+                        rightInAnimation  = 'pt-page-rotateSlideIn';
+                        rightOutAnimation = 'pt-page-rotateSlideOut';
                     break;
                     
                     default: 
