@@ -155,6 +155,13 @@
                         rightOutAnimation = 'pt-page-rotateLeftSideFirst';
                     break;
                     
+                    case 'glueTopBottom':
+                        leftInAnimation   = 'pt-page-moveFromTop pt-page-delay200 pt-page-ontop';
+                        leftOutAnimation  = 'pt-page-rotateTopSideFirst';
+                        rightInAnimation  = 'pt-page-moveFromBottom pt-page-delay200 pt-page-ontop';
+                        rightOutAnimation = 'pt-page-rotateBottomSideFirst';
+                    break;
+                    
                     case 'cubeLeftRight':
                         leftInAnimation   = 'pt-page-rotateCubeLeftIn';
                         leftOutAnimation  = 'pt-page-rotateCubeLeftOut pt-page-ontop';
