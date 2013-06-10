@@ -3,6 +3,13 @@ Wanky Pages
 
 Fancy page transitions based on CSS from tympanus.net (http://tympanus.net/Development/PageTransitions).
 
+Demo
+====
+
+http://demo.peterbailey.eu/wankyPages/example.php
+
+See below for other animations.
+
 Usage
 =====
 
@@ -112,11 +119,11 @@ Usage
 Supported Animations
 ====================
 
-- moveLeftRight
-- foldLeftRight
-- pushLeftRight
-- foldTopBottom
-- moveToLeftRightEasing
-- scaleDown
-- glueLeftRight
-- cubeLeftRight
+- moveLeftRight (http://demo.peterbailey.eu/wankyPages/example.php?animation=moveLeftRight)
+- foldLeftRight (http://demo.peterbailey.eu/wankyPages/example.php?animation=foldLeftRight)
+- pushLeftRight (http://demo.peterbailey.eu/wankyPages/example.php?animation=pushLeftRight)
+- foldTopBottom (http://demo.peterbailey.eu/wankyPages/example.php?animation=foldTopBottom)
+- moveToLeftRightEasing (http://demo.peterbailey.eu/wankyPages/example.php?animation=moveToLeftRightEasing)
+- scaleDown (http://demo.peterbailey.eu/wankyPages/example.php?animation=scaleDown)
+- glueLeftRight (http://demo.peterbailey.eu/wankyPages/example.php?animation=glueLeftRight)
+- cubeLeftRight (http://demo.peterbailey.eu/wankyPages/example.php?animation=cubeLeftRight)
