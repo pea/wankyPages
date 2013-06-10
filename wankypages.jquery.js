@@ -135,16 +135,16 @@
                     break;
                     
                     case 'moveToLeftRightEasing':
-                        leftInAnimation   = 'pt-page-moveFromRight';
-                        leftOutAnimation  = 'pt-page-moveToLeftEasing pt-page-ontop';
-                        rightInAnimation  = 'pt-page-moveFromLeft';
-                        rightOutAnimation = 'pt-page-moveToRightEasing pt-page-ontop';
+                        leftInAnimation   = 'pt-page-moveFromLeft';
+                        leftOutAnimation  = 'pt-page-moveToRightEasing pt-page-ontop';
+                        rightInAnimation  = 'pt-page-moveFromRight';
+                        rightOutAnimation = 'pt-page-moveToLeftEasing pt-page-ontop';
                     break;
                     
                     case 'scaleDown':
-                        leftInAnimation   = 'pt-page-moveFromRight pt-page-ontop';
+                        leftInAnimation   = 'pt-page-moveFromLeft pt-page-ontop';
                         leftOutAnimation  = 'pt-page-scaleDown';
-                        rightInAnimation  = 'pt-page-moveFromLeft pt-page-ontop';
+                        rightInAnimation  = 'pt-page-moveFromRight pt-page-ontop';
                         rightOutAnimation = 'pt-page-scaleDown';
                     break;
                     

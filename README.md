@@ -126,4 +126,5 @@ Supported Animations
 - moveToLeftRightEasing (http://demo.peterbailey.eu/wankyPages/example.php?animation=moveToLeftRightEasing)
 - scaleDown (http://demo.peterbailey.eu/wankyPages/example.php?animation=scaleDown)
 - glueLeftRight (http://demo.peterbailey.eu/wankyPages/example.php?animation=glueLeftRight)
+- glueTopBottom (http://demo.peterbailey.eu/wankyPages/example.php?animation=glueTopBottom)
 - cubeLeftRight (http://demo.peterbailey.eu/wankyPages/example.php?animation=cubeLeftRight)
