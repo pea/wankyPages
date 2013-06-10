@@ -6,7 +6,7 @@ Fancy page transitions based on CSS from tympanus.net (http://tympanus.net/Devel
 Usage
 =====
 
-1. Add animations.css
+- [x] Add animations.css
 
 ```html
 
@@ -14,7 +14,7 @@ Usage
 
 ```
 
-2. Add foundation styles for pages
+- [x] Add foundation styles for pages
 
 ```css
 
@@ -58,7 +58,7 @@ Usage
 
 ```
 
-3. Add Page markup
+- [x] Add Page markup
 
 ```html
 
@@ -83,7 +83,7 @@ Usage
 
 ```
 
-4. Add Javascript dependencies
+- [x] Add Javascript dependencies
 
 ```html
 
@@ -93,7 +93,7 @@ Usage
 
 ```
 
-5. Load the plugin
+- [x] Load the plugin
 
 ```javascript
 
