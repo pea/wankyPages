@@ -108,3 +108,12 @@ Usage
     });
 
     ```
+    
+Supported Animations
+====================
+
+- moveLeftRight
+- foldLeftRight
+- pushLeftRight
+- foldTopBottom
+- moveToLeftRightFade
