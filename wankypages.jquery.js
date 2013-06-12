@@ -93,10 +93,10 @@
                 
                 // Get direction of navigation
                 
-                if((next_page.prevAll(current_page)).length == 0){
-                    var direction = 'left';   
+                if(current_page.index() > next_page.index()){
+                    var direction = 'left';
                 } else {
-                    var direction = 'right';  
+                    var direction = 'right';
                 }
                 
                 var leftOutAnimation = null;
