@@ -107,9 +107,23 @@ Usage
     $(document).ready(function(){
 
         $('#pages').wankyPages({
-            selector_prefix   : 'wanky_',                // Prefix to give all classes and ID's (apart from animations)
-            default_page      : '1',                     // Default/ first page to load
-            animation         : 'foldLeftRight'          // Animation type
+
+            selector_prefix   : 'wanky_',                             // Prefix to give all classes and ID's
+            default_page      : 1,                                    // Default/ first page to load
+            
+            animation         : false,
+            
+            leftInAnimation   : 'pt-page-moveFromLeft',               // Class to apply to pages switching to moving left
+            leftOutAnimation  : 'pt-page-moveToRight',                // Class to apply to pages switching from moving left
+            
+            rightInAnimation  : 'pt-page-moveFromRight',              // Class to apply to pages switching to moving right
+            rightOutAnimation : 'pt-page-moveToLeft',                 // Class to apply to pages switching from moving right
+            
+            onBeforeChange    : function(next_page, current_page){},  // Function to call before page changes
+            onAfterChange     : function(){},                         // Function to call after page changes
+            onBeforeLoad      : function(){},                         // Function to call before plugin loads
+            onInterval        : function(current_page){}              // Function to call on page checking interval
+
         });
 
     });
