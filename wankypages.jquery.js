@@ -3,16 +3,21 @@
 
     var defaults = {
         
-        selector_prefix   : 'wanky_',                    // Prefix to give all classes and ID's
-        default_page      : 1,                           // Default/ first page to load
+        selector_prefix   : 'wanky_',                             // Prefix to give all classes and ID's
+        default_page      : 1,                                    // Default/ first page to load
         
         animation         : false,
         
-        leftInAnimation   : 'pt-page-moveFromLeft',  // Class to apply to pages switching to moving left
-        leftOutAnimation  : 'pt-page-moveToRight',   // Class to apply to pages switching from moving left
+        leftInAnimation   : 'pt-page-moveFromLeft',               // Class to apply to pages switching to moving left
+        leftOutAnimation  : 'pt-page-moveToRight',                // Class to apply to pages switching from moving left
         
-        rightInAnimation  : 'pt-page-moveFromRight', // Class to apply to pages switching to moving right
-        rightOutAnimation : 'pt-page-moveToLeft'     // Class to apply to pages switching from moving right
+        rightInAnimation  : 'pt-page-moveFromRight',              // Class to apply to pages switching to moving right
+        rightOutAnimation : 'pt-page-moveToLeft',                 // Class to apply to pages switching from moving right
+        
+        onBeforeChange    : function(next_page, current_page){},  // Function to call before page changes
+        onAfterChange     : function(){},                         // Function to call after page changes
+        onBeforeLoad      : function(){},                         // Function to call before plugin loads
+        onInterval        : function(current_page){}              // Function to call on page checking interval
         
     };
     var options = $.extend(defaults, options);
@@ -26,8 +31,12 @@
         */
     
         if(window.location.hash){
+            options.onBeforeChange(window.location.hash.substring(1), false);
+            options.onBeforeLoad(window.location.hash.substring(1));
             obj.find('.' + options.selector_prefix + 'page[data-pageid="' + window.location.hash.substring(1) + '"]').addClass('' + options.selector_prefix + 'current_page');
         } else {
+            options.onBeforeChange(options.default_page, false);
+            options.onBeforeLoad(options.default_page);
             obj.find('.' + options.selector_prefix + 'page[data-pageid="' + options.default_page + '"]').addClass('' + options.selector_prefix + 'current_page');
         }
         
@@ -38,7 +47,7 @@
         
         setInterval(function(){
             
-            if(window.location.hash == ''){
+            if(window.location.hash == '' || obj.find('.' + options.selector_prefix + 'page[data-pageid="' + window.location.hash.substring(1) + '"]').length == 0){
                 var hash = options.default_page;
             } else {
                 var hash = window.location.hash.substring(1);
@@ -47,6 +56,8 @@
             if(hash != $('.' + options.selector_prefix + 'current_page').attr('data-pageid')){
                 pages.switch_page(hash);
             }
+            
+            options.onInterval(hash);
             
         }, 100);
 
@@ -86,6 +97,8 @@
                 
                 var current_page = $('.' + options.selector_prefix + 'current_page');
                 var next_page = $('.' + options.selector_prefix + 'page[data-pageid="' + page_id + '"]');
+                
+                options.onBeforeChange(page_id, current_page.attr('data-pageid'));
 
                 // Don't change page if requested page is current page
                 
@@ -176,6 +189,13 @@
                         rightOutAnimation = 'pt-page-rotateSlideOut';
                     break;
                     
+                    case 'moveUnfoldTopBottom':
+                        leftInAnimation   = 'pt-page-rotateUnfoldTop';
+                        leftOutAnimation  = 'pt-page-moveToBottomFade';
+                        rightInAnimation  = 'pt-page-rotateUnfoldBottom';
+                        rightOutAnimation = 'pt-page-moveToTopFade';
+                    break;
+                    
                     default: 
                         leftOutAnimation = options.leftOutAnimation;
                         leftInAnimation = options.leftInAnimation;
@@ -204,6 +224,7 @@
                 
                 next_page.addClass(in_classes).on(animEndEventName, function() {
                     $(this).removeClass(in_classes).addClass(options.selector_prefix + 'current_page');
+                    options.onAfterChange();
                 });
                 
             }
