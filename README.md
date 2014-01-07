@@ -1,7 +1,7 @@
 Wanky Pages
 ===========
 
-Fancy page transitions based on CSS from tympanus.net (http://tympanus.net/Development/PageTransitions).
+Page switching management with 3D/2D CSS3 transition support.
 
 Demo
 ====
