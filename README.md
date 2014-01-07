@@ -111,13 +111,13 @@ Usage
             selector_prefix   : 'wanky_',                             // Prefix to give all classes and ID's
             default_page      : 1,                                    // Default/ first page to load
             
-            animation         : false,
+            animation         : 'moveUnfoldTopBottom',                // Animation to used. Change to false to use overrides
             
-            leftInAnimation   : 'pt-page-moveFromLeft',               // Class to apply to pages switching to moving left
-            leftOutAnimation  : 'pt-page-moveToRight',                // Class to apply to pages switching from moving left
+            leftInAnimation   : 'pt-page-moveFromLeft',               // Override left-in animation
+            leftOutAnimation  : 'pt-page-moveToRight',                // Override left-out animatino
             
-            rightInAnimation  : 'pt-page-moveFromRight',              // Class to apply to pages switching to moving right
-            rightOutAnimation : 'pt-page-moveToLeft',                 // Class to apply to pages switching from moving right
+            rightInAnimation  : 'pt-page-moveFromRight',              // Override right-in animation
+            rightOutAnimation : 'pt-page-moveToLeft',                 // Override right-out animation
             
             onBeforeChange    : function(next_page, current_page){},  // Function to call before page changes
             onAfterChange     : function(){},                         // Function to call after page changes
