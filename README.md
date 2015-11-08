@@ -3,13 +3,6 @@ Wanky Pages
 
 Page switching management with 3D/2D CSS3 transition support.
 
-Demo
-====
-
-http://demo.peterbailey.eu/wankyPages/example.php
-
-See below for other animations.
-
 Usage
 =====
 
@@ -133,12 +126,12 @@ Usage
 Supported Animations
 ====================
 
-- moveLeftRight (http://demo.peterbailey.eu/wankyPages/example.php?animation=moveLeftRight)
-- foldLeftRight (http://demo.peterbailey.eu/wankyPages/example.php?animation=foldLeftRight)
-- pushLeftRight (http://demo.peterbailey.eu/wankyPages/example.php?animation=pushLeftRight)
-- foldTopBottom (http://demo.peterbailey.eu/wankyPages/example.php?animation=foldTopBottom)
-- moveToLeftRightEasing (http://demo.peterbailey.eu/wankyPages/example.php?animation=moveToLeftRightEasing)
-- scaleDown (http://demo.peterbailey.eu/wankyPages/example.php?animation=scaleDown)
-- glueLeftRight (http://demo.peterbailey.eu/wankyPages/example.php?animation=glueLeftRight)
-- glueTopBottom (http://demo.peterbailey.eu/wankyPages/example.php?animation=glueTopBottom)
-- cubeLeftRight (http://demo.peterbailey.eu/wankyPages/example.php?animation=cubeLeftRight)
+- moveLeftRight
+- foldLeftRight
+- pushLeftRight
+- foldTopBottom
+- moveToLeftRightEasing
+- scaleDown
+- glueLeftRight
+- glueTopBottom
+- cubeLeftRight
